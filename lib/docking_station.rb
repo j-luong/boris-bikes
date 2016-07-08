@@ -7,6 +7,7 @@ class DockingStation
 
   def initialize(capacity = DEFAULT_CAPACITY)
       @bikes = []
+      @broken_bikes = []
       @capacity = capacity
   end
 
@@ -28,6 +29,10 @@ class DockingStation
 
   def get_bikes
     @bikes
+  end
+
+  def give_broken
+    @broken_bikes
   end
 
   private
