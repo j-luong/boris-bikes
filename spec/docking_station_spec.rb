@@ -10,6 +10,17 @@ describe DockingStation do
     expect(subject.get_bikes).to eq [bike]
   end
 
+  describe 'initialization' do
+    subject { DockingStation.new } #similar to station = DockingStation.new
+    let(:bike) { Bike.new } #creates a new bike instance everytime bike is called in a new block
+    it 'defaults capacity' do
+      described_class::DEFAULT_CAPACITY.times do #described_class refers to the described_class in line 3
+        subject.dock(bike)
+      end
+      expect{ subject.dock(bike) }.to raise_error "Error, docking station at full capacity."
+    end
+  end
+
   describe '#release_bike' do
     it { is_expected.to respond_to(:release_bike) }
 
