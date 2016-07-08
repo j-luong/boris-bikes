@@ -10,7 +10,7 @@ class Van
   end
 
   def get_broken(station)
-    @bikes << station.release_broken_bikes
+    @bikes << station.release_bike
   end
 
 end
