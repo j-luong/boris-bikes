@@ -4,17 +4,11 @@ class Bike
     @working = true
   end
 
-  def check_working?
-    working?
+  def working?
+    @working
   end
 
   def reported_broken
     @working = false
-  end
-
-  private
-
-  def working?
-    @working
   end
 end

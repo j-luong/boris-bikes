@@ -17,7 +17,7 @@ describe DockingStation do
       bike = Bike.new
       subject.dock(bike)
       bike = subject.release_bike
-      expect(bike).to be_check_working # same as expect(bike.check_working?).to eq true
+      expect(bike).to be_working # same as expect(bike.check_working?).to eq true
     end
 
     it "will not release a broken bike" do

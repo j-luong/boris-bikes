@@ -1,4 +1,4 @@
 require 'bike'
 describe Bike do
-  it {should respond_to :check_working?}
+  it {should respond_to :working?}
 end
